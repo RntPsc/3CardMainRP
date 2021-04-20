@@ -50,4 +50,8 @@ I want to continue learning responsive layout, and in next projects I will try t
 
 ## Author
 
-- GitHub - [rntpsc](https://github.com/rntpsc)
+- GitHub - [rntpsc](https://github.com/RntPsc/3CardMainRP.git)
+
+## Github
+
+https://rntpsc.github.io/3CardMainRP/
