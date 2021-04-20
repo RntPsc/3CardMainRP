@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <title>Frontend Mentor | 3CardComponentRP</title>
+</head>
+
+<body>
+  <main class="card-container">
+
+    <section id="secSdn" class="card sedans">
+      <img id="imgSdn" src="./images/icon-sedans.svg" alt="sedans car" />
+      <h1>Sedans</h1>
+      <p>
+        Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+        or on your next road trip.
+      </p>
+      <button id="btnSdn">Learn More</button>
+    </section>
+
+    <section id="secSvs" class="card suvs">
+      <img id="imgSvs" src="./images/icon-suvs.svg" alt="suvs car" />
+      <h1>SUVs</h1>
+      <p>
+        Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+        and off-road adventures.
+      </p>
+      <button id="btnSvs">Learn More</button>
+    </section>
+
+    <section id="secLxr" class="card luxury">
+      <img id="imgLxr" src="./images/icon-luxury.svg" alt="luxury car" />
+      <h1>Luxury</h1>
+      <p>
+        Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
+        rental and arrive in style.
+      </p>
+      <button id="btnLxr">Learn More</button>
+    </section>
+  </main>
+
+  <footer>
+    <marquee>
+      Challenge by
+      <a href="https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-"
+        target="_blank">Frontend
+        Mentor</a>. Coded by <a href="https://github.com/RntPsc">RntPscWork</a>.
+      bla bla bla.
+    </marquee>
+  </footer>
+
+</body>
+
+<script>
+  var flgStr = false;
+  anim1(btnSdn, secSdn, imgSdn);
+  anim1(btnSvs, secSvs, imgSvs);
+  anim1(btnLxr, secLxr, imgLxr);
+
+  function anim1(btnX, secX, imgX) {
+
+    btnX.addEventListener('click', function () {
+      secX.classList.toggle("clsTra1");
+      secX.style.animationName = "";
+      if (flgStr) {
+        flgStr = false;
+      } else {
+        flgStr = true;
+      }
+    });
+    btnX.addEventListener('mouseover', function () {
+      imgX.style.animationName = "spinIco";
+      imgX.style.animationDuration = "1s";
+    });
+    btnX.addEventListener('mouseout', function () {
+      imgX.style.animationName = "";
+      secX.classList.remove("clsTra1");
+      if (flgStr) {
+        secX.style.animationName = "aniSec2";
+        secX.style.animationDuration = "1.5s";
+      }
+      flgStr = false;
+    });
+  }
+</script>
+
+</html>
